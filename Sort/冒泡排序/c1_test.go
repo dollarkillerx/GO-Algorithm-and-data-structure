@@ -14,9 +14,9 @@ import (
 )
 
 func TestMans(t *testing.T) {
-	data := make([]int,100)
+	data := make([]int, 100)
 	rand.Seed(time.Now().UnixNano())
-	for i:=range data{
+	for i := range data {
 		data[i] = rand.Intn(999)
 	}
 	fmt.Println(data)
@@ -25,10 +25,10 @@ func TestMans(t *testing.T) {
 }
 
 func Asort(data []int) {
-	for i:=range data{
-		for j:=1;j<len(data)-i;j++{
+	for i := range data {
+		for j := 1; j < len(data)-i; j++ {
 			if data[j] < data[j-1] {
-				data[j],data[j-1] = data[j-1],data[j]
+				data[j], data[j-1] = data[j-1], data[j]
 			}
 		}
 	}

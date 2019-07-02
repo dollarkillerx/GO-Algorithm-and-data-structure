@@ -62,26 +62,26 @@ func TestErF(t *testing.T) {
 	go func() {
 		// 模拟小红选的数
 		hong := rand.Intn(101)
-		fmt.Println("hong:",hong)
-		datas := make([]int,0)
-		for i:=0;i<=100;i++ {
-			datas = append(datas,i)
+		fmt.Println("hong:", hong)
+		datas := make([]int, 0)
+		for i := 0; i <= 100; i++ {
+			datas = append(datas, i)
 		}
 		len := len(datas)
 		fmt.Println(len)
 		start := 0
 		end := len - 1
-		for start<end{
+		for start < end {
 			// 中间数
-			ms := (start + end)/2
+			ms := (start + end) / 2
 			fmt.Println("")
 			if datas[ms] == hong {
-				fmt.Printf("找到了hong:%d len:%d  data:%d\n",hong,ms,datas[ms])
+				fmt.Printf("找到了hong:%d len:%d  data:%d\n", hong, ms, datas[ms])
 				break
-			}else if datas[ms] > hong {
+			} else if datas[ms] > hong {
 				end = datas[ms]
 				continue
-			}else if datas[ms] < hong {
+			} else if datas[ms] < hong {
 				start = datas[ms]
 				continue
 			}

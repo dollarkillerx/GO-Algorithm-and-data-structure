@@ -20,12 +20,12 @@ func TestDemo557(t *testing.T) {
 func reverseWords(s string) string {
 	data := ""
 	split := strings.Split(s, " ")
-	end := len(split)-1
-	for k,v := range split {
+	end := len(split) - 1
+	for k, v := range split {
 		i := desc(v)
 		if k != end {
 			data += i + " "
-		}else{
+		} else {
 			data += i
 		}
 	}
@@ -34,7 +34,7 @@ func reverseWords(s string) string {
 
 func desc(s string) string {
 	data := ""
-	for i:=len(s)-1;i>=0;i-- {
+	for i := len(s) - 1; i >= 0; i-- {
 		data += string(s[i])
 	}
 	return data

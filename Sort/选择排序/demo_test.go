@@ -16,7 +16,7 @@ import (
 func TestOne(t *testing.T) {
 	rand.Seed(time.Now().UnixNano())
 	data := []int{}
-	for i:=0;i<100;i++{
+	for i := 0; i < 100; i++ {
 		intn := rand.Intn(999)
 		data = append(data, intn)
 	}
@@ -25,12 +25,12 @@ func TestOne(t *testing.T) {
 	len := len(data)
 	//end := len - 1
 	s := 0
-	for s<len{
+	for s < len {
 		min := data[s]
 		st := s
-		for ;st<len;st++{
+		for ; st < len; st++ {
 			if data[st] < min {
-				min,data[st] = data[st],min
+				min, data[st] = data[st], min
 			}
 		}
 		data[s] = min

@@ -12,17 +12,16 @@ import (
 )
 
 func TestOne(t *testing.T) {
-	nums := []int{1,1,2}
+	nums := []int{1, 1, 2}
 	removeDuplicates(nums)
 	fmt.Println(nums)
 }
 
-
 func removeDuplicates(nums []int) int {
 	ns := []int{}
-	for _,v := range nums {
+	for _, v := range nums {
 		if excts(ns, v) {
-			ns = append(ns,v)
+			ns = append(ns, v)
 
 		}
 	}
@@ -31,8 +30,8 @@ func removeDuplicates(nums []int) int {
 	return len(ns)
 }
 
-func excts(ns []int,val int) bool {
-	for _,v := range ns {
+func excts(ns []int, val int) bool {
+	for _, v := range ns {
 		if v == val {
 			return false
 		}
