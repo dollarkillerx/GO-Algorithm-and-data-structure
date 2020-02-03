@@ -14,7 +14,7 @@ import (
 )
 
 // 返回测试数据
-func getDatas(num int,max int) []int {
+func getDatas(num int, max int) []int {
 	var data []int
 	rand.Seed(time.Now().UnixNano())
 	for i := 0; i < num; i++ {
@@ -39,7 +39,7 @@ func maximumGap(nums []int) int {
 
 	max := ints[1] - ints[0]
 
-	for i:=1;i<len(ints);i++{
+	for i := 1; i < len(ints); i++ {
 		ds := ints[i] - ints[i-1]
 		if max < ds {
 			max = ds
@@ -51,11 +51,11 @@ func maximumGap(nums []int) int {
 
 // 排序
 func sor(nums []int) []int {
-	for i:=0;i<len(nums);i++{
+	for i := 0; i < len(nums); i++ {
 		min := nums[i]
-		for j:=len(nums) - 1;j>i;j--{
+		for j := len(nums) - 1; j > i; j-- {
 			if min > nums[j] {
-				min,nums[j] = nums[j],min
+				min, nums[j] = nums[j], min
 			}
 		}
 		nums[i] = min

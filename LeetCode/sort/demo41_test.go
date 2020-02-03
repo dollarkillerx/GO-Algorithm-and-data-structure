@@ -12,7 +12,7 @@ import (
 )
 
 func TestDemo41(t *testing.T) {
-	data := []int{3,4,-1,1}
+	data := []int{3, 4, -1, 1}
 	positive := firstMissingPositive(data)
 	fmt.Println(positive)
 }

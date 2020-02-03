@@ -28,11 +28,11 @@ func TestDemo2(t *testing.T) {
 	data2 := getData2()
 	fmt.Println(data2)
 
-	for i:=0;i<len(data2);i++{
+	for i := 0; i < len(data2); i++ {
 		min := data2[i]
-		for i2:=len(data2)-1;i2>i;i2--{
+		for i2 := len(data2) - 1; i2 > i; i2-- {
 			if min > data2[i2] {
-				min,data2[i2] = data2[i2],min
+				min, data2[i2] = data2[i2], min
 			}
 		}
 		data2[i] = min
