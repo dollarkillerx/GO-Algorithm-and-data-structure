@@ -21,15 +21,15 @@ func TestStack_New(t *testing.T) {
 
 	fmt.Println(stack.Size())
 
-	for i:=0;i<10;i++ {
+	for i := 0; i < 10; i++ {
 		pop, e := stack.Pop()
 		if e != nil {
 			log.Println(e)
 		}
-		s1,bool := pop.(string)
+		s1, bool := pop.(string)
 		if bool {
 			fmt.Println(s1)
-		}else {
+		} else {
 			fmt.Println("is not")
 		}
 	}

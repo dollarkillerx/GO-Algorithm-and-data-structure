@@ -19,8 +19,8 @@ type Stack struct {
 	cap   uint64
 }
 
-func New(cap uint64) StackArrayInterface{
-//func New(cap uint64) *Stack {
+func New(cap uint64) StackArrayInterface {
+	//func New(cap uint64) *Stack {
 	return &Stack{
 		array: make([]interface{}, 0),
 		len:   0,
