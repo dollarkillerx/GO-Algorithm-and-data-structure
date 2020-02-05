@@ -9,11 +9,11 @@ import (
 
 //  通过任务stack 实现目录遍历
 
-func GetDirAllByStack(filepath string) ([]string,error) {
+func GetDirAllByStack(filepath string) ([]string, error) {
 	stack := stack.New(200)
-	filepath,err := filepath2.Abs(filepath)
+	filepath, err := filepath2.Abs(filepath)
 	if err != nil {
-		return nil,err
+		return nil, err
 	}
 	stack.Push(filepath)
 
@@ -32,14 +32,14 @@ func GetDirAllByStack(filepath string) ([]string,error) {
 		}
 		for _, v := range infos {
 			if v.IsDir() {
-				filepath = filepath2.Join(filepath,v.Name())
-				result = append(result,filepath)
+				filepath = filepath2.Join(filepath, v.Name())
+				result = append(result, filepath)
 				stack.Push(filepath)
-			}else {
-				file := filepath2.Join(filepath,v.Name())
-				result = append(result,file)
+			} else {
+				file := filepath2.Join(filepath, v.Name())
+				result = append(result, file)
 			}
 		}
 	}
-	return result,nil
+	return result, nil
 }

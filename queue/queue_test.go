@@ -29,3 +29,9 @@ func TestQueue_Clear(t *testing.T) {
 	fmt.Println(queue.Size())
 	fmt.Println(queue.IsEmpty())
 }
+
+func TestTwo(t *testing.T) {
+	a := 0
+	a++
+	fmt.Println(a)
+}

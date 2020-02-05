@@ -11,8 +11,7 @@ func TestGetDirAllByStack(t *testing.T) {
 	if e != nil {
 		log.Fatalln(e)
 	}
-	for _,v := range strings {
+	for _, v := range strings {
 		fmt.Println(v)
 	}
 }
-

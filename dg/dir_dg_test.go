@@ -12,7 +12,7 @@ func TestGetDirAll(t *testing.T) {
 		log.Fatalln(e)
 	}
 
-	for _,v := range strings {
+	for _, v := range strings {
 		log.Println(v)
 	}
 }
