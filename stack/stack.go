@@ -4,7 +4,7 @@ import (
 	"errors"
 )
 
-type StackArrayInterface interface {
+type StackInterface interface {
 	Push(data interface{}) error
 	Pop() (interface{}, error)
 	Clear()
@@ -19,8 +19,7 @@ type Stack struct {
 	cap   uint64
 }
 
-func New(cap uint64) StackArrayInterface {
-	//func New(cap uint64) *Stack {
+func New(cap uint64) StackInterface {
 	return &Stack{
 		array: make([]interface{}, 0),
 		len:   0,
@@ -69,8 +68,4 @@ func (s *Stack) IsEmpty() bool {
 		return true
 	}
 	return false
-}
-
-func (s *Stack) GetAR() []interface{} {
-	return s.array
 }

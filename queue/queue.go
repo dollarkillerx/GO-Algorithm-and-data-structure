@@ -1,6 +1,6 @@
 package queue
 
-type MyQueue interface {
+type QueueInterface interface {
 	Size() uint64
 	First() interface{}
 	End() interface{}
@@ -14,7 +14,7 @@ type Queue struct {
 	data []interface{} // 存储数据
 }
 
-func New() MyQueue {
+func New() QueueInterface {
 	return &Queue{
 		data: make([]interface{}, 0),
 	}
