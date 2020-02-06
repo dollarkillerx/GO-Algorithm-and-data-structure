@@ -12,3 +12,4 @@
 *.out
 .idea
 .idea/
+test_data/csdn500.sql
