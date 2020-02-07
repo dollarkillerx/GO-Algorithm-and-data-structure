@@ -21,11 +21,12 @@ func sortString(testData []string) []string {
 		for j := i + 1; j < len(testData); j++ {
 			a := testData[j]
 			if strings.Compare(min, a) == 1 {
-				testData[j] = min
-				min = a
+				//testData[j] = min
+				//min = a
+				testData[j], testData[i] = testData[i], testData[j]
 			}
 		}
-		testData[i] = min
+		//testData[i] = min
 	}
 	return testData
 }
