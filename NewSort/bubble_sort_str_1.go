@@ -7,10 +7,15 @@ import (
 
 func bubbleSortStr(data []string) []string {
 	for i := len(data) - 1; i > 0; i-- {
+		isok := false
 		for j := 0; j < i; j++ {
 			if strings.Compare(data[j], data[j+1]) == -1 {
 				data[j], data[j+1] = data[j+1], data[j]
+				isok = true
 			}
+		}
+		if !isok {
+			break
 		}
 	}
 	return data
